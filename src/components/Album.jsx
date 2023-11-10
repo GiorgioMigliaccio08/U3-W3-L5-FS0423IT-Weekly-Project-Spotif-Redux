@@ -1,6 +1,8 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { viewAlbumAction, viewArtistAction } from "../redux/action/index";
+import { VIEW_ALBUM } from "../redux/action/index";
+import finalPropsSelectorFactory from "react-redux/es/connect/selectorFactory";
 
 const Album = (props) => {
   const dispatch = useDispatch();
@@ -8,7 +10,14 @@ const Album = (props) => {
   return (
     <div className="col text-center">
       <a href=".">
-        <img className="img-fluid" src={props.cover} alt="1" />
+        <img
+          className="img-fluid"
+          src={props.cover}
+          alt="1"
+          onClick={() => {
+            dispatch({ type: VIEW_ALBUM, payload: props });
+          }}
+        />
       </a>
       <p>
         <Link
