@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 
 const Player = () => {
   const musicBar = useSelector((state) => state.artist);
+  console.log(musicBar);
   return (
     <Container fluid className="fixed-bottom bg-container pt-1">
       <div>
@@ -21,7 +22,6 @@ const Player = () => {
             >
               <Row className="row">
                 <div className="d-flex justify-content-between">
-                  <div className="text-white">PROVA</div>
                   <a href="alt">
                     <img src={shuffle} alt="shuffle" />
                   </a>

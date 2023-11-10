@@ -2,7 +2,6 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { viewAlbumAction, viewArtistAction } from "../redux/action/index";
 import { VIEW_ALBUM } from "../redux/action/index";
-import finalPropsSelectorFactory from "react-redux/es/connect/selectorFactory";
 
 const Album = (props) => {
   const dispatch = useDispatch();
